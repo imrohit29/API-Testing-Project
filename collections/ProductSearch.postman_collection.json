@@ -1,0 +1,25 @@
+{
+  "info": {
+    "name": "ProductSearch",
+    "_postman_id": "productsearch-collection-id",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Products",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{authToken}}" }],
+        "url": { "raw": "https://example.com/api/products?search=phone", "protocol": "https", "host": ["example","com"], "path": ["api","products"], "query":[{"key":"search","value":"phone"}]}
+      }
+    },
+    {
+      "name": "Get Product Details",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{authToken}}" }],
+        "url": { "raw": "https://example.com/api/products/123", "protocol": "https", "host": ["example","com"], "path": ["api","products","123"] }
+      }
+    }
+  ]
+}

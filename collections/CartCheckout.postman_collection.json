@@ -1,0 +1,39 @@
+{
+  "info": {
+    "name": "CartCheckout",
+    "_postman_id": "cartcheckout-collection-id",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add to Cart",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{authToken}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"productId\": \"123\",\n  \"quantity\": 2\n}"
+        },
+        "url": { "raw": "https://example.com/api/cart/add", "protocol": "https", "host": ["example","com"], "path": ["api","cart","add"] }
+      }
+    },
+    {
+      "name": "Checkout",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{authToken}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"paymentMethod\": \"card\",\n  \"address\": \"123 Street, City\"\n}"
+        },
+        "url": { "raw": "https://example.com/api/checkout", "protocol": "https", "host": ["example","com"], "path": ["api","checkout"] }
+      }
+    }
+  ]
+}

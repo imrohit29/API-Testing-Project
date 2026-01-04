@@ -1,0 +1,35 @@
+{
+  "info": {
+    "name": "Auth",
+    "_postman_id": "auth-collection-id",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"rohit\",\n  \"password\": \"12345\"\n}"
+        },
+        "url": { "raw": "https://example.com/api/login", "protocol": "https", "host": ["example","com"], "path": ["api","login"] }
+      }
+    },
+    {
+      "name": "Signup",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Rohit\",\n  \"email\": \"rohit@example.com\",\n  \"password\": \"12345\"\n}"
+        },
+        "url": { "raw": "https://example.com/api/signup", "protocol": "https", "host": ["example","com"], "path": ["api","signup"] }
+      }
+    }
+  ]
+}
